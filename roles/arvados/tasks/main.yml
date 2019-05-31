@@ -1,0 +1,16 @@
+- name: Arvados dependencies
+  yum:
+    name:
+      - python36-pycurl
+      - python36
+      - python36-pip
+      - gcc-c++
+      - libcurl-devel
+      - openssl-devel
+      - python36-devel
+    state: present
+
+
+- pip:
+    name: arvados-cwl-runner
+    executable: /usr/bin/pip3
